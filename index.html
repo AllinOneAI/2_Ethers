@@ -7,28 +7,19 @@
     </head>
     <body style="background-color:#fcffe3;">
             <h1 style="color:black;text-align:center;">Simple application for transactions</h1> <br><br>
-
-            <div>
-            	<h2>Your address: </h2> 
-            	<h4 id="address"></h4> <br><br>
-            	
-            	<h2>Your balance: </h2>
-            	<h4 id="balance"></h4> <br><br>
-            </div>
-
             <div style="display:inline-block">
+                <h1  id="account">123</h1>
+                <button id="conect">Connect to Meta</button>
             	<h2>Create transaction</h2>
             	<input type="text" id="to" placeholder="Send to" pattern="^0x[a-fA-F0-9]{40}$" style="height:25px; width:150%"></input> 
-            	<input type="text" id="ammount" placeholder="ammount" pattern="^[0-9]*$" style="height:25px; width:150%"></input> <br></br>
-            	<button id="button" disabled>Submit</button>
+            	<input type="text" id="amount" placeholder="amount" pattern="^[0-9]*$" style="height:25px; width:150%"></input><br>
+            	<button id="submit">Submit</button>
         	</div>
 
             <div></div>
 
             <h2></h2>
-
-
-
+        <script src="https://unpkg.com/@metamask/detect-provider@1.2.0/dist/detect-provider.min.js" ></script>
         <script src="scr/script.js" type="module"></script>
     </body>
 </html>
