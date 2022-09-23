@@ -3,22 +3,35 @@
     <head>
         <meta charset="UTF-8">			
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TASK1</title>
+        <title>TASK2</title>
     </head>
     <body style="background-color:#fcffe3;">
-            <h1 style="color:black;text-align:center;">Simple application for transactions</h1> <br><br>
+            <div style="text-align:center;">
+            <h1>Проста аплікаця для транзакцій</h1> 
+            <button id="connect" >Connect to MetaMask</button>
+            </div>
+            <br>
+            <br>
+
+            <table>
+            	<tr>
+            		<th>Your address:</th>
+            		<th> <i id="addr"></i> </th>
+            	</tr>
+            	<tr>
+            		<th>Your balance: </th>
+            		<th> <i id="bal"></i> </th>
+            	</tr>
+            </table>
+
             <div style="display:inline-block">
-                <h1  id="account">123</h1>
-                <button id="conect">Connect to Meta</button>
-            	<h2>Create transaction</h2>
-            	<input type="text" id="to" placeholder="Send to" pattern="^0x[a-fA-F0-9]{40}$" style="height:25px; width:150%"></input> 
-            	<input type="text" id="amount" placeholder="amount" pattern="^[0-9]*$" style="height:25px; width:150%"></input><br>
+                <h2>Create transaction</h2>
+            	<input type="text" id="to" placeholder="Send to" pattern="^0x[a-fA-F0-9]{40}$" style="height:25px; width:100%"></input> 
+            	<input type="text" id="amount" placeholder="amount" pattern="^.*$" style="height:25px; width:100%"></input><br>
             	<button id="submit">Submit</button>
         	</div>
 
-            <div></div>
 
-            <h2></h2>
         <script src="https://unpkg.com/@metamask/detect-provider@1.2.0/dist/detect-provider.min.js" ></script>
         <script src="scr/script.js" type="module"></script>
     </body>
